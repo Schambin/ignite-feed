@@ -43,8 +43,13 @@ export function Post() {
                             > Publicar </button>
                     </footer>
 
-                   <Comment />
             </form>
+
+            <div className={style.commentSection}>
+                <Comment />
+                <Comment />
+                <Comment />
+            </div>
         </article>
     )
 }

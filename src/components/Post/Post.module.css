@@ -136,3 +136,7 @@
     visibility: visible;
     max-height: none;
 }
+
+.commentSection {
+    margin-top: 1.6rem;
+}

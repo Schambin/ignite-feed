@@ -1,8 +1,18 @@
 .comment {
-    font-size: 1.6rem;
+    margin-top: 1.6rem;
+    display: flex;
+    gap: 1.6rem;
 }
 
 .comment img {
-    width: 4.8rem;
-    height: 4.8rem;
+    width: 6rem;
+    height: 6rem;
+    box-sizing: initial;
+    border-radius: .8rem;
+}
+
+.commentBox {
+    padding: 1.6rem;
+
+    background: var(--gray-700);
 }
