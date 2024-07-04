@@ -11,20 +11,17 @@ export function App() {
       <Header />
 
         <div className={styles.wrapper}>
+
           <Sidebar>
             <h1>Sidebar</h1>
           </Sidebar>
-            <main>
-              <Post
-                author="Kauan Arthur"
-                content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque excepturi quam temporibus repellat iste. Sed minus, consequuntur accusantium suscipit labore fugit similique alias, est nemo atque eos eveniet odio nihil."
-                />
-              <Post
-                author="Sacudo da Silva"
-                content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque excepturi quam temporibus repellat iste. Sed minus, consequuntur accusantium suscipit labore fugit similique alias, est nemo atque eos eveniet odio nihil."
-                />
-            </main>
-      </div>
+
+          <main>
+            <Post />
+            {/* <Post /> */}
+          </main>
+
+        </div>
 
     </div>
   )
