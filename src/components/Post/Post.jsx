@@ -1,3 +1,5 @@
+import { Comment } from '../Comment/Comment'
+
 import style from './Post.module.css';
 
 export function Post() {
@@ -28,14 +30,22 @@ export function Post() {
                 <p><a href="#">#novoprojeto</a></p><p><a href="#">#nlw</a></p> <p><a href="#">#rocketseat</a></p>
             </div>
 
-            <footer>
+            <form className={style.commentForm}>
                 <div className={style.bottomContent}>
                     <div className={style.border} />
                     <span>Deixe seu feedback</span>
-                    <textarea />
-                    <button>Publicar</button>
+                    <textarea placeholder='Adicionar Comentário'/>
                 </div>
-            </footer>
+                    <footer>
+                        <button
+                            type='submit'
+                            className={style.formSubmit}
+                            > Publicar </button>
+                    </footer>
+
+                   <Comment />
+            </form>
         </article>
     )
 }
+
