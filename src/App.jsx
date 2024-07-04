@@ -22,7 +22,7 @@ export function App() {
               <Post
                 author="Sacudo da Silva"
                 content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque excepturi quam temporibus repellat iste. Sed minus, consequuntur accusantium suscipit labore fugit similique alias, est nemo atque eos eveniet odio nihil."
-                />  
+                />
             </main>
       </div>
 
