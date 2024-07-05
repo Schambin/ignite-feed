@@ -10,7 +10,7 @@ export function Comment() {
                 <header className={styles.commentBox}>
                     <div className={styles.commentBoxUser}>
                         <div className={styles.userData}>
-                            <strong>John Doe (você)</strong>
+                            <strong>John Doe <span>(você)</span></strong>
                             <time title="03 de Julho às 09:04h">Cerca de 2h</time>
                         </div>
                             <button title="Deletar">
@@ -21,7 +21,7 @@ export function Comment() {
                 </header>
                 <footer className={styles.applauseSection}>
                     <button title="Aplaudir">
-                        <PiThumbsUpBold />
+                        <PiThumbsUpBold size={20}/>
                         Aplaudir <span>20</span>
                     </button> 
                 </footer>

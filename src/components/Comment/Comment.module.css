@@ -25,6 +25,7 @@
     margin-bottom: 1.6rem;
 
     background: var(--gray-700);
+    border-radius: .9rem;
 }
 
 .commentBox button {
@@ -32,6 +33,12 @@
     border: none;
     cursor: pointer;
     color: var(--gray-400);
+
+    transition: .1s;
+}
+
+.commentBox button:hover {
+    color: var(--red-500);
 }
 
 .userData {
@@ -39,8 +46,39 @@
     flex-direction: column;
 }
 
+.userData > strong {
+    color: var(--gray-100);
+    font-size: 1.4rem;
+}
+
 .applauseSection{
     display: flex;
     align-items: center;
     gap: 1.6rem;
+}
+
+.applauseSection button { 
+    display: flex;
+    align-items: center;
+
+    background: transparent;
+
+    border: none;
+    cursor: pointer;
+
+    color: var(--gray-400);
+    text-align: center;
+}
+
+.applauseSection button:hover {
+    color: var(--green-300);
+}
+
+.applauseSection button svg {
+    margin-right: 0.75rem;
+}
+
+.applauseSection button span::before {
+    content: "\2022";
+    padding: 0 .45rem;
 }
