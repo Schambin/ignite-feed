@@ -1,3 +1,5 @@
+import { Avatar } from "../Avatar/Avatar";
+
 import { PiPencilLine } from "react-icons/pi";
 import style from './sidebar.module.css';
 
@@ -10,7 +12,7 @@ export function Sidebar() {
             />
             
             <div className={style.profile}>
-                <img className={style.avatar} src="https://github.com/Schambin.png" alt="Foto de perfil do usuário" />
+                <Avatar src="https://github.com/Schambin.png"/>
                 <strong> Kauan Arthur </strong>
                 <span>FullStack Developer</span>
             </div>

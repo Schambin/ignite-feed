@@ -1,16 +1,17 @@
 import { PiTrash, PiThumbsUpBold } from "react-icons/pi";
 
 import styles from './Comment.module.css';
+import { Avatar } from "../Avatar/Avatar";
 
 export function Comment() {
     return (
         <div className={styles.commentSection}>
-            <img src="https://github.com/Schambin.png" />
+            <Avatar hasBorder={false} src="https://github.com/Schambin.png"/>
             <div>
                 <header className={styles.commentBox}>
                     <div className={styles.commentBoxUser}>
                         <div className={styles.userData}>
-                            <strong>John Doe <span>(você)</span></strong>
+                            <strong>John Doe</strong>
                             <time title="03 de Julho às 09:04h">Cerca de 2h</time>
                         </div>
                             <button title="Deletar">
