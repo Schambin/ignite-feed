@@ -48,7 +48,13 @@
 
 .userData > strong {
     color: var(--gray-100);
-    font-size: 1.4rem;
+    font-size: 1.5rem;
+}
+
+.userData time {
+    margin-top: .4rem;
+    color: var(--gray-400);
+    font-size: 12px;
 }
 
 .applauseSection{
