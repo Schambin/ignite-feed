@@ -10,3 +10,9 @@
 
     width: 83.2rem;
 }
+
+@media (max-width: 768px) { 
+    .wrapper {
+        grid-template-columns: 1fr;
+    }
+}
