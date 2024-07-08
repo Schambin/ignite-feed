@@ -1,10 +1,11 @@
 .header {
+    font-size: 1.6px;
+
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 1.6rem;
     
-    width: 100%;
     padding: 2rem 0;
 
     background-color: var(--gray-800);
