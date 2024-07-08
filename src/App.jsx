@@ -5,6 +5,7 @@ import { Sidebar } from "./components/Sidebar/sidebar";
 import "./global.css";
 import styles from "./App.module.css";
 
+//Simulating body return from a back-end.
 const posts = [ 
   {
     id: 1,
