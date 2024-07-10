@@ -3,11 +3,11 @@ import { PiTrash, PiThumbsUpBold } from "react-icons/pi";
 import styles from './Comment.module.css';
 import { Avatar } from "../Avatar/Avatar";
 
-export function Comment() {
+export function Comment(properties) {
     return (
         <div className={styles.commentSection}>
             <Avatar hasBorder={false} src="https://github.com/Schambin.png"/>
-            <div>
+            <div className={styles.handleCommentBox}>
                 <header className={styles.commentBox}>
                     <div className={styles.commentBoxUser}>
                         <div className={styles.userData}>
@@ -18,7 +18,7 @@ export function Comment() {
                                 <PiTrash size={24}/>
                             </button>
                     </div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, urna sed vulputate ullamcorper, nunc velit fringilla felis, in consectetur risus felis vel diam.</p>
+                        <p>{properties.content}</p>
                 </header>
                 <footer className={styles.applauseSection}>
                     <button title="Aplaudir">
