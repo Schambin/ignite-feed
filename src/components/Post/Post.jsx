@@ -58,9 +58,9 @@ export function Post(properties) {
             <div className={style.postContent}>
                 {properties.content.map( line => {
                     if( line.type === 'paragraph') {
-                        return <p>{line.content}</p>
+                        return <p key={line.content}>{line.content}</p>
                     } else if ( line.type === 'link' ) {
-                        return <p><a href="#">{line.content}</a></p>
+                        return <p key={line.content}><a href="#">{line.content}</a></p>
                     }
                 })}
             </div>
