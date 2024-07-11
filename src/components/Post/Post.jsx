@@ -13,8 +13,6 @@ export function Post(properties) {
         'post foda fi',
     ])
 
-    const [newComments, setNewCommnets] = useState('')
-
     const publishedDate = format(properties.publishedAt, "dd 'de' LLLL 'às' HH:mm'h' ", {
         locale: ptBR,
     })
@@ -25,10 +23,14 @@ export function Post(properties) {
         addSuffix: true,
     })
 
+    const [newCommentText, setNewCommentText] = useState('');
+
     function createNewComment() {
         event.preventDefault();
 
         setComments([...comments, newCommentText]);
+
+        setNewCommentText('');
 
     }
 
@@ -63,21 +65,24 @@ export function Post(properties) {
                 })}
             </div>
 
-            <form 
-                onSubmit={createNewComment} 
-                className={style.commentForm}
-            >
+            <form onSubmit={createNewComment} className={style.commentForm}>
+
                 <div className={style.bottomContent}>
                     <div className={style.border} />
                     <span>Deixe seu feedback</span>
-                <textarea name='formSubmit' onChange={handleNewCommentChange} placeholder='Adicionar Comentário'/>
+                <textarea 
+                    onChange={handleNewCommentChange} 
+                    value={newCommentText} 
+                    name='formSubmit' 
+                    placeholder='Adicionar Comentário'/>
                 </div>
-                    <footer>
-                        <button
-                            type='submit'
-                            className={style.formSubmit}
-                            > Publicar </button>
-                    </footer>
+
+                <footer>
+                    <button
+                        type='submit'
+                        className={style.formSubmit}
+                        > Publicar </button>
+                </footer>
 
             </form>
 
