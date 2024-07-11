@@ -8,7 +8,7 @@ import { Comment } from '../Comment/Comment';
 import { useState } from 'react';
 
 
-export function Post(properties) {
+export function Post(properties, ) {
     const [comments, setComments] = useState([
         'post foda fi',
     ])
@@ -36,6 +36,14 @@ export function Post(properties) {
 
     function handleNewCommentChange(event) {
         setNewCommentText(event.target.value);
+    }
+
+    function deleteComment(commentToDelete) {
+        const commentsWithoutDeletedOne = comments.filter(comment => {
+            return comment!== commentToDelete;
+        })
+
+        setComments(commentsWithoutDeletedOne);
     }
 
     return (
@@ -88,7 +96,7 @@ export function Post(properties) {
 
             <div className={style.commentSection}>
                 {comments.map(comment => {
-                    return <Comment key={comment} content={comment}/>;
+                    return <Comment key={comment} content={comment} onDeleteComment={deleteComment} />;
                 })}
             </div>
         </article>
