@@ -17,10 +17,11 @@
     margin-bottom: 1.6rem;
 }
 
-.commentBox {
+.handleCommentBox {
     flex: 1;
-    justify-content: space-between;
+}
 
+.commentBox {
     padding: 1.6rem;
     margin-bottom: 1.6rem;
 
