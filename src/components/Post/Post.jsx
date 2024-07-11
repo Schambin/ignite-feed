@@ -36,6 +36,11 @@ export function Post(properties, ) {
 
     function handleNewCommentChange(event) {
         setNewCommentText(event.target.value);
+        event.target.setCustomValidity('');
+    }
+
+    function handleInvalidComment(event) {
+        event.target.setCustomValidity('Esse campo é obrigatório!');
     }
 
     function deleteComment(commentToDelete) {
@@ -78,17 +83,23 @@ export function Post(properties, ) {
                 <div className={style.bottomContent}>
                     <div className={style.border} />
                     <span>Deixe seu feedback</span>
+                
                 <textarea 
                     onChange={handleNewCommentChange} 
                     value={newCommentText} 
                     name='formSubmit' 
-                    placeholder='Adicionar Comentário'/>
+                    placeholder='Adicionar Comentário'
+                    onInvalid={handleInvalidComment}
+                    required
+                />
+
                 </div>
 
                 <footer>
                     <button
                         type='submit'
                         className={style.formSubmit}
+                        disabled={newCommentText.length === 0}
                         > Publicar </button>
                 </footer>
 
