@@ -10,7 +10,6 @@ import { useState } from 'react';
 
 export function Post(properties, ) {
     const [comments, setComments] = useState([
-        'post foda fi',
     ])
 
     const publishedDate = format(properties.publishedAt, "dd 'de' LLLL 'às' HH:mm'h' ", {
@@ -23,34 +22,36 @@ export function Post(properties, ) {
         addSuffix: true,
     })
 
-    const [newCommentText, setNewCommentText] = useState('');
-
     function createNewComment() {
         event.preventDefault();
-
+        
         setComments([...comments, newCommentText]);
-
+        
         setNewCommentText('');
-
+        
     }
-
+    
     function handleNewCommentChange(event) {
         setNewCommentText(event.target.value);
         event.target.setCustomValidity('');
     }
-
+    
     function handleInvalidComment(event) {
         event.target.setCustomValidity('Esse campo é obrigatório!');
     }
-
+    
     function deleteComment(commentToDelete) {
         const commentsWithoutDeletedOne = comments.filter(comment => {
             return comment!== commentToDelete;
         })
-
+        
         setComments(commentsWithoutDeletedOne);
     }
 
+    const [newCommentText, setNewCommentText] = useState('');
+
+    const isNewCommentEmpty = newCommentText.length === 0
+    
     return (
         <article className={style.post}>
             <header>
@@ -99,7 +100,7 @@ export function Post(properties, ) {
                     <button
                         type='submit'
                         className={style.formSubmit}
-                        disabled={newCommentText.length === 0}
+                        disabled={isNewCommentEmpty}
                         > Publicar </button>
                 </footer>
 
