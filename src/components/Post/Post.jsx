@@ -16,7 +16,6 @@ export function Post(properties, ) {
         locale: ptBR,
     })
 
-    
     const publishedDateRelativeToNow = formatDistanceToNow(properties.publishedAt, {
         locale: ptBR,
         addSuffix: true,
@@ -51,6 +50,8 @@ export function Post(properties, ) {
     const [newCommentText, setNewCommentText] = useState('');
 
     const isNewCommentEmpty = newCommentText.length === 0
+
+
     
     return (
         <article className={style.post}>
